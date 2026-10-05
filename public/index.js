@@ -18,25 +18,25 @@ const g = {
 		"You have uncovered the outline of",
 	],
 	beforePreface: [
-		"Before, that was",
-		"That used to be",
-		"You can tell that used to be",
-		"It seems that used to be",
-		"They say that was",
-		"That previously was",
-		"Faint traces reveal",
-		"Prior to that, there was",
-		"Part of that used to be",
-		"Earlier, that was part of",
-		"Further excavation reveals",
-		"Erected on top of",
-		"That stands on the site of",
-		"Formerly",
-		"Previously that was",
-		"Beneath which lie the remains of",
-		"That was built on top of",
-		"Built upon",
-		"That was constructed over the remains of",
+		"before, that was",
+		"that used to be",
+		"you can tell that used to be",
+		"it seems that used to be",
+		"they say that was",
+		"that previously was",
+		"faint traces reveal",
+		"prior to that, there was",
+		"part of that used to be",
+		"earlier, that was part of",
+		"further excavation reveals",
+		"erected on top of",
+		"that stands on the site of",
+		"formerly",
+		"previously that was",
+		"beneath which lie the remains of",
+		"that was built on top of",
+		"built upon",
+		"that was constructed over the remains of",
 	],
 	descriptor: [
 		"remote",
@@ -92,10 +92,10 @@ window.addEventListener("load", () => {
 	G = tracery.createGrammar(g);
 	const $i = $("#inner");
 	$i.append(
-		`<p class="stratum">${G.flatten("#today#")}. ${G.flatten("#before#")}.</p>`,
+		`<p class="stratum">${G.flatten("#today#")}, ${G.flatten("#before#")}</p>`,
 	);
 	$i.on("click", () => {
-		$i.append(`<p class="stratum">${G.flatten("#before#")}.</p>`);
+		$i.append(`<p class="stratum">${G.flatten("#before#")}</p>`);
 		const scrollHeight = document.getElementById("inner").scrollHeight;
 		$i.scrollTop(-scrollHeight);
 	});
