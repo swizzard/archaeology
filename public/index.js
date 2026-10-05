@@ -25,7 +25,7 @@ const g = {
 		"They say that was",
 		"That previously was",
 		"Faint traces reveal",
-		"Prior to that,",
+		"Prior to that, there was",
 		"Part of that used to be",
 		"Earlier, that was part of",
 		"Further excavation reveals",
@@ -34,6 +34,9 @@ const g = {
 		"Formerly",
 		"Previously that was",
 		"Beneath which lie the remains of",
+		"That was built on top of",
+		"Built upon",
+		"That was constructed over the remains of",
 	],
 	descriptor: [
 		"remote",
