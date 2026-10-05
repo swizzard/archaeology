@@ -31,3 +31,10 @@ body {
         font-size-adjust: 0.4;
     }
 }
+
+@supports not (color: hsl(67.35 75.38 12.75 / calc(clamp(0.2, sibling-index() / sibling-count(), 1)))) {
+    #outer #inner .stratum {
+        color: hsl(67.35 75.38 12.75 0.5);
+    }
+}
+
