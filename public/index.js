@@ -12,18 +12,28 @@ const g = {
 		"Nowadays, this is",
 		"The uppermost archaeological stratum reveals the ruins of",
 		"These ruins most recently were",
+		"This is",
+		"This is part of",
+		"You can see",
+		"You have uncovered the outline of",
 	],
 	beforePreface: [
-		"Before that, it was",
-		"It used to be",
-		"You can tell that it was",
-		"It seems that it used to be",
-		"They say that it was",
-		"It previously was",
-		"Faint traces reveal that it previously was",
-		"Prior to that, it was",
-		"Part of it used to be",
-		"Before that, it was part of",
+		"Before, that was",
+		"That used to be",
+		"You can tell that used to be",
+		"It seems that used to be",
+		"They say that was",
+		"That previously was",
+		"Faint traces reveal",
+		"Prior to that,",
+		"Part of that used to be",
+		"Earlier, that was part of",
+		"Further excavation reveals",
+		"Erected on top of",
+		"That stands on the site of",
+		"Formerly",
+		"Previously that was",
+		"Beneath which lie the remains of",
 	],
 	descriptor: [
 		"remote",
@@ -46,6 +56,8 @@ const g = {
 		"complex",
 		"lavish",
 		"austere",
+		"venerated",
+		"feared",
 	],
 	structure: [
 		"temple",
@@ -67,13 +79,20 @@ const g = {
 		"hospital",
 		"shrine",
 		"monument",
+		"tumulus",
+		"barrow",
+		"dining hall",
 	],
 };
 
-const $inner = $("#inner");
-
 window.addEventListener("load", () => {
 	G = tracery.createGrammar(g);
-	const txt = `${G.flatten("#today#")}. ${G.flatten("#before#")}.`;
-	$inner.text(txt);
+	const $i = $("#inner");
+	$i.append(
+		`<p class="stratum">${G.flatten("#today#")}. ${G.flatten("#before#")}.</p>`,
+	);
+	$i.on("click", () => {
+		$i.append(`<p class="stratum">${G.flatten("#before#")}.</p>`);
+		$i.scrollTop(0);
+	});
 });

@@ -1,0 +1,33 @@
+body {
+    --background-color: hsla(65, 38%, 71%, 1);
+    --border-color: hsl(62.07,14.72%,61.37%);
+    background: var(--background-color);
+}
+
+#outer {
+    font-family: cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    #inner {
+        cursor: url("spade-icon.svg") 2 2, auto;
+        display: flex;
+        flex-direction: column-reverse;
+        border: solid 1px var(--border-color);
+        width: 70vw;
+        min-height: 10vh;
+        max-height: 70vh;
+        margin-top: 20vh;
+        overflow-y: scroll;
+
+        .stratum {
+            color: hsl(67.35 75.38 12.75 / calc(clamp(0.2, sibling-index() / sibling-count(), 1)));
+            text-align: center;
+        }
+    }
+    #note {
+        font-size-adjust: 0.4;
+    }
+}
