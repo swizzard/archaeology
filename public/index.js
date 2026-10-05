@@ -93,6 +93,7 @@ window.addEventListener("load", () => {
 	);
 	$i.on("click", () => {
 		$i.append(`<p class="stratum">${G.flatten("#before#")}.</p>`);
-		$i.scrollTop(0);
+		const scrollHeight = document.getElementById("inner").scrollHeight;
+		$i.scrollTop(-scrollHeight);
 	});
 });

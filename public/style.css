@@ -19,7 +19,7 @@ body {
         width: 70vw;
         min-height: 10vh;
         max-height: 70vh;
-        margin-top: 20vh;
+        margin-top: 5vh;
         overflow-y: scroll;
 
         .stratum {
