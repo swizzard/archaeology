@@ -22,7 +22,7 @@ const g = {
 		"that used to be",
 		"you can tell that used to be",
 		"it seems that used to be",
-		"they say that was",
+		"they say that used to be",
 		"that previously was",
 		"faint traces reveal",
 		"prior to that, there was",
