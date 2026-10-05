@@ -32,9 +32,8 @@ body {
     }
 }
 
-@supports not (color: hsl(67.35 75.38 12.75 / calc(clamp(0.2, sibling-index() / sibling-count(), 1)))) {
+@media (max-width: 700px) {
     #outer #inner .stratum {
-        color: hsl(67.35 75.38 12.75 0.5);
+        color: hsl(67.35 75.38 12.75 1);
     }
 }
-
